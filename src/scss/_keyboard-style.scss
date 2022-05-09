@@ -1,6 +1,169 @@
 .keyboard {
+    margin-top: 50px;
     background-color: bisque;
     width: 90%;
-    height: 300px;
+    height: 340px;
     margin: 0 auto;
+    padding: 2%;
+    border: 2px solid rgb(60, 22, 99);
+    border-radius: 20px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.key {
+    border: 2px solid rgb(60, 22, 99);
+    border-radius: 5px;
+    width: 5.5%;
+    height: 84%;
+    background-color: rgb(223, 177, 177);
+    box-shadow: 1px 2px 35px 14px rgba(132, 37, 145, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-weight: 700;
+
+    &.key-backquote {
+        font-size: 1.8rem;
+    }
+
+
+    &.key-backspace {
+        width: 11%;
+    }
+
+    &.key-tab {
+        width: 9%;
+    }
+
+    &.key-capslock {
+        width: 11%;
+    }
+
+    &.key-shiftleft {
+        width: 14%;
+    }
+
+    &.key-controlleft {
+        width: 9%;
+    }
+
+    &.key-space {
+        width: 44%;
+    }
+
+    &.key-enter {
+        width: 12%;
+    }
+
+    &.key-enter {
+        width: 12%;
+    }
+
+    &.key-shiftright {
+        width: 14%;
+    }
+
+    &.arrow {
+        div {
+            width: 100%;
+            height: 100%;
+            background: url('../assets/icons/Arrow-forward.svg') no-repeat center;
+            transform: scale(2);
+        }
+    }
+
+    &.key-arrowleft {
+        div {
+            transform: rotate(180deg) scale(2);
+        }
+    }
+
+    &.key-arrowup {
+        div {
+            transform: rotate(-90deg) scale(2);
+        }
+    }
+
+    &.key-arrowdown {
+        div {
+            transform: rotate(90deg) scale(2);
+        }
+    }
+}
+
+.key:hover {
+    background-color: rgb(160, 103, 216);
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+@media (max-width:1000px) {
+
+    .keyboard {
+        height: 300px;
+    }
+
+    .key {
+        font-size: 0.8rem;
+
+        &.key-backquote {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width:700px) {
+
+    .keyboard {
+        height: 200px;
+    }
+
+    .key {
+        font-size: 0.5rem;
+
+        &.key-backquote{
+            font-size: 0.8rem;
+        }
+
+        &.key-backspace {
+            width: 14%;
+        }
+        &.key-capslock {
+            width: 14%;
+        }
+
+        &.arrow {
+            div {
+
+                background: url('../assets/icons/Arrow-forward.svg') no-repeat center;
+                transform: scale(1);
+            }
+        }
+
+        &.key-arrowleft {
+            div {
+                transform: rotate(180deg) scale(1);
+            }
+        }
+
+        &.key-arrowup {
+            div {
+                transform: rotate(-90deg) scale(1);
+            }
+        }
+
+        &.key-arrowdown {
+            div {
+                transform: rotate(90deg) scale(1);
+            }
+        }
+    }
 }
