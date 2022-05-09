@@ -97,15 +97,26 @@
             transform: rotate(90deg) scale(2);
         }
     }
+
+}
+.selected {
+    background-color: rgb(160, 103, 216);
+    cursor: pointer;
+    transition: all ease 0.5s;
 }
 
 .key:hover {
-    background-color: rgb(160, 103, 216);
+    background-color: rgb(236, 129, 209);
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.key:active {
+    background-color:  rgb(160, 103, 216);
     cursor: pointer;
     transition: all ease 0.2s;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1000px) {f
 
     .keyboard {
         height: 300px;
@@ -129,13 +140,14 @@
     .key {
         font-size: 0.5rem;
 
-        &.key-backquote{
+        &.key-backquote {
             font-size: 0.8rem;
         }
 
         &.key-backspace {
             width: 14%;
         }
+
         &.key-capslock {
             width: 14%;
         }

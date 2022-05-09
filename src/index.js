@@ -8,9 +8,14 @@ container.classList.add('container');
 root.append(container);
 container.append(keyboard.getElement());
 
-const textAria = document.createElement('div');
-textAria.classList.add('textAria');
-container.prepend(textAria)
+const textArea = document.createElement('textarea');
+textArea.classList.add('textArea');
+textArea.setAttribute("rows", "5");
+textArea.setAttribute("cols", "45");
+// console.log(textArea.value)
+// console.log(textArea)
+window.tArea = textArea;
+container.prepend(textArea);
 
 const title = document.createElement('div');
 title.classList.add('title');
