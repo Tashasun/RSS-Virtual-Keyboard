@@ -73,7 +73,7 @@ const arrKeyboard = [
             new Key({ en: ",", ru: "Б", code: "Comma" }),
             new Key({ en: ".", ru: "Ю", code: "Period" }),
             new Key({ en: "/", ru: "/", code: "Slash" }),
-            new KeyArrowUp({code: "ArrowUp" }),
+            new KeyArrowUp({ code: "ArrowUp" }),
             new Key({ en: "Shift", ru: "Shift", code: "ShiftRight" }),
         ]
     }),
@@ -95,7 +95,8 @@ const arrKeyboard = [
 class Keyboard {
     constructor(property) {
         this._element = document.createElement('div');
-        this._element.classList.add('keyboard')
+        this._element.classList.add('keyboard');
+        this._element.id ="keyboard"
         for (let i = 0; i < arrKeyboard.length; i++) {
             this._element.append(arrKeyboard[i].getElement())
         }
@@ -109,28 +110,20 @@ class Keyboard {
 }
 
 document.addEventListener('keydown', (event) => {
-    
+
     if (`key-${event.code.toLowerCase()}` == "key-capslock") {
         document.querySelector(`.key-${event.code.toLowerCase()}`).classList.toggle("selected");
-        // console.log(document.querySelector(`.key-${event.code.toLowerCase()}`))
     }
-    else{
-    document.querySelector(`.key-${event.code.toLowerCase()}`).classList.add("selected");
-
-    // console.log(document.querySelector(`.key-${event.code.toLowerCase()}`))
-}
-    // console.log(event.code)
+    else {
+        document.querySelector(`.key-${event.code.toLowerCase()}`).classList.add("selected");
+    }
 })
 
 document.addEventListener('keyup', (event) => {
     if (`key-${event.code.toLowerCase()}` !== "key-capslock") {
-        document.querySelector(`.key-${event.code.toLowerCase()}`).classList.remove("selected") 
+        document.querySelector(`.key-${event.code.toLowerCase()}`).classList.remove("selected")
     }
-    
-    // console.log(document.querySelector(`.key-${event.code.toLowerCase()}`))
-    // console.log(event.code)
 })
-
 
 
 

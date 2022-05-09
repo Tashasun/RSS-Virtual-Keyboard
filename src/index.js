@@ -1,8 +1,8 @@
 import "./scss/main-style.scss";
 import keyboard from "./js/keyboard"; "./js/keyboard.js"
 
-const root = document.querySelector('body')
-console.log(root)
+
+const root = document.querySelector('body');
 const container = document.createElement('div');
 container.classList.add('container');
 root.append(container);
@@ -12,8 +12,6 @@ const textArea = document.createElement('textarea');
 textArea.classList.add('textArea');
 textArea.setAttribute("rows", "5");
 textArea.setAttribute("cols", "45");
-// console.log(textArea.value)
-// console.log(textArea)
 window.tArea = textArea;
 container.prepend(textArea);
 
@@ -31,6 +29,11 @@ const instruction= document.createElement('p')
 instruction.classList.add('instruction');
 instruction.innerText = "Переключение языка: Shift + Alt"
 container.append(instruction);
+function onFocus(){
+    textArea.focus()
+}
+document.addEventListener("DOMContentLoaded", onFocus);
+document.addEventListener("click", onFocus);
 
 
 

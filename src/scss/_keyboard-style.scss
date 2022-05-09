@@ -105,16 +105,16 @@
     transition: all ease 0.5s;
 }
 
-.key:hover {
-    background-color: rgb(236, 129, 209);
-    cursor: pointer;
-    transition: all ease 0.2s;
-}
-.key:active {
-    background-color:  rgb(160, 103, 216);
-    cursor: pointer;
-    transition: all ease 0.2s;
-}
+// .key:not(.selected):hover {
+//     background-color: rgb(236, 129, 209);
+//     cursor: pointer;
+//     transition: all ease 0.2s;
+// }
+// .key:not(.selected):active {
+//     background-color:  rgb(160, 103, 216);
+//     cursor: pointer;
+//     transition: all ease 0.2s;
+// }
 
 @media (max-width:1000px) {f
 
